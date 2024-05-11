@@ -1,0 +1,103 @@
+/* Perus tyylit */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('https://www.maailmanperinto.fi/wp-content/uploads/Vanha-Rauma-syksyll%C3%A4-e1552650158224.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0066A1;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Asetetaan boksit pystysuoraan */
+    height: 100vh; /* Täyttää näytön korkeuden */
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #E0004D;
+    width: 400px;
+    height: 50px;
+    box-shadow: 0 0 0px #fce2e4;
+    display: block;
+}
+
+.box:hover {
+    box-shadow: 0 0 10px rgba(252, 226, 228, 0.8);
+}
+
+.box-content {
+    display: none;
+    padding: 5px;
+    background-color: #fce2e4;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.box-content p {
+    margin: 0;
+}
+
+.box.active {
+    width: 1500px;
+    height: 500px;
+}
+
+.box.active .box-content {
+    display: block;
+}
+
+/* Lisätty tyyli gallerialle */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Asettaa kuvat tasaisesti */
+}
+
+.gallery img {
+    flex: 1; /* Annetaan joustavuus kuvan koolle */
+    max-width: 100%; /* Varmistetaan, että kuva ei ole suurempi kuin sen alkuperäinen koko */
+    height: auto; /* Säilytetään kuvasuhde */
+    margin: 5px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0066A1;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
