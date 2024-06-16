@@ -61,6 +61,31 @@ nav {
     box-shadow: 0 0 10px rgb(255, 0, 0);
 }
 
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000; /* varmista, että popup on muiden elementtien päällä */
+}
+
+.hamtausta {
+    display: none; /* initially hidden */
+    position: fixed;
+    z-index: 2; /* ensure it's above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.623); /* semi-transparent black */
+}
+
+/* To make it visible */
+.hamtausta.active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards; /* You can define fadeIn animation */
+}
+
 .nav-items {
     display: flex;
     justify-content: center;
@@ -83,6 +108,16 @@ nav {
 .nav-logo img, .logo img {
     width: 200px;
     height: auto;
+}
+
+.insta a {
+    display: flex;
+    background-image: url('../KUVAT + MUUT/Instagram.png');
+    background-size: contain; /* Skaalaa kuva kuvakehykseen */
+    background-position: center;
+    width: 1.4cm;
+    height: 1.4cm;
+    border-radius: 0.5cm;
 }
 
 nav a {
@@ -113,20 +148,17 @@ nav a {
     color: #ff7373;
 }
 
-
-
-.nuoli {
+button {
+    background-image: url(../KUVAT\ +\ MUUT/Arrowleft.png);
     display: flex;
     width: 50px;
     height: 50px;
     background-color: #910000;
-    background-image: url('../KUVAT + MUUT/Arrowleft.png');
     background-size: contain;
     border-radius: 1cm;
 }
 
-.nuoli:hover {
-    background-image: url('../KUVAT + MUUT/Arrowleft.png');
+button:hover {
     background-color: #ff0000;
 }
 
@@ -145,6 +177,11 @@ section {
     margin-top: 100px; /* Lisää marginaali navin alle */
     overflow: hidden; /* Piilottaa ylivuotavan sisällön */
     word-wrap: break-word; /* Pakottaa pitkät sanat jakautumaan riveille */
+}
+
+#privacy {
+    background-color: #9e0000;
+    font-size: 25px;
 }
 
 #guide {
