@@ -1,5 +1,0 @@
-video {
-    width: 98vw; /* 98% näytön leveydestä */
-    height: 98vh; /* 98% näytön korkeudesta */
-    object-fit: cover; /* Varustettu peittämään koko elementin ja säilyttämään kuvasuhteen */
-}
